@@ -19,7 +19,7 @@ My task was to operationalize this file `app.py` in a repeatable way by creating
 
 ### Dependencies
 #### 1. Python
-[Download and install the python](https://www.python.org/downloads/). 
+[Download and install python](https://www.python.org/downloads/). 
 
 #### 2. Docker Desktop
 You would require you to install Docker Desktop to create containers for individual microservices. Refer the following links for instructions 
@@ -43,7 +43,7 @@ You'll need an [AWS account](https://aws.amazon.com/free/?all-free-tier.&all-fre
 
 ## Setup the Environment
 
-* Create a virtualenv and activate it
+* Run `python3 -m venv ~/.devops` to create a virtualenv and `source ~/.devops/bin/activate` to activate it
 * Run `make install` to install the necessary dependencies
 
 ### Running `app.py`
@@ -56,6 +56,6 @@ You can then run `./make_prediction.sh` in another ternminal window to feed in s
 
 ### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally (with minikube installed run `minikube start` to launch cluster)
-* App can be run using `./run_kubernetes.sh` with pre-built image on Docker Hub
+* Setup and Configure Docker locally (as above in Dependencies section)
+* Setup and Configure Kubernetes locally (as above in Dependencies section - with minikube installed run `minikube start` to launch cluster)
+* App can be run using `./run_kubernetes.sh` with pre-built image on Docker Hub. By editing the `dockerpath` variable in this file you can select a different image to run using this script.
